@@ -1,0 +1,24 @@
+# Зависимости
+node_modules/
+
+# Окружение и секреты
+.env
+.env.local
+.env.*.local
+
+# База SQLite (можно раскомментировать, если не хотите коммитить пустую БД)
+backend/data/
+
+# Сборка
+dist/
+*.local
+
+# Логи и кэш
+*.log
+.cache
+
+# IDE и ОС
+.idea
+.vscode/*
+!.vscode/extensions.json
+.DS_Store

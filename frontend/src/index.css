@@ -1,0 +1,196 @@
+:root {
+  font-family: 'Nunito', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --color-primary: #2d5a4a;
+  --color-primary-hover: #3d7a6a;
+  --color-text: #2c2c2c;
+  --color-text-muted: #5a5a5a;
+  --color-bg: #f5f1ed;
+  --color-bg-muted: #ebe7e2;
+  --color-card: #ffffff;
+  --color-border: #e0dbd5;
+  --color-accent-soft: rgba(45, 90, 74, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  color: inherit;
+}
+
+.card {
+  background-color: var(--color-card);
+  border-radius: 12px;
+  padding: 20px 22px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.dashboard-subtitle {
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.dashboard-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.dashboard-action-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 20px;
+  background: var(--color-card);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--color-border);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.dashboard-action-card:hover {
+  border-color: var(--color-primary);
+  background: var(--color-accent-soft);
+}
+
+.dashboard-action-card strong {
+  color: var(--color-primary);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.dashboard-action-card span {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table th,
+.table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--color-accent-soft);
+  color: var(--color-primary);
+}
+
+.empty-block p {
+  margin: 0 0 8px;
+  color: #4b5563;
+}
+.empty-block p:last-child {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.admin-tab {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  color: #4b5563;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.admin-tab:hover {
+  background: var(--color-accent-soft);
+  border-color: var(--color-primary);
+}
+.admin-tab.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: transparent;
+}
+.admin-form { max-width: 480px; }
+.admin-form-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+.admin-check { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.admin-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.admin-list-item p { margin: 4px 0 0; font-size: 13px; color: #6b7280; }
+.admin-actions { display: flex; gap: 8px; flex-shrink: 0; }
+.admin-select-inline { font-size: 13px; padding: 4px 8px; border-radius: 8px; }
+
+.booking-success { margin-top: 12px; color: var(--color-primary); font-weight: 600; }
+.booking-error { margin-top: 12px; color: #b91c1c; }
+.booking-upcoming { margin-top: 24px; }
+.booking-upcoming-note { margin: 12px 0 0; font-size: 13px; color: #6b7280; }
+
+.news-search-wrap { margin-bottom: 16px; }
+.news-search {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border, #e5e7eb);
+  font-size: 14px;
+}
+.news-search:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
